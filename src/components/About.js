@@ -9,13 +9,13 @@ function About() {
     <div>
         <div className='w-[90%] mx-auto text-center'>
         <div className=''>
-            <img src='https://static.wixstatic.com/media/caa0a7_b0b783f5e64a429291da378b97123a70~mv2.jpg/v1/fill/w_959,h_1439,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/HighResolution-21.jpg' alt=''/>
+            <img src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt=''/>
         </div>
         <div className='my-5'>
-        <img src='https://static.wixstatic.com/media/caa0a7_0be0ffb58dfb4cd3ab08e03e6707a35a~mv2.jpg/v1/fill/w_900,h_1350,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MP-25.jpg' alt=''/>
+        <img src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt=''/>
         </div>
         <div>
-        <img src='https://static.wixstatic.com/media/caa0a7_2853f84801e94577af448fa5e78a37a5~mv2.jpg/v1/fill/w_959,h_1439,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MP-33.jpg' alt=''/>
+        <img src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt=''/>
         </div>
         </div>
         <div className='text-center'>
@@ -37,7 +37,7 @@ function About() {
             <Info />
         </div>
         <div className='w-[95%] mx-auto mt-10'>
-            <img src='https://static.wixstatic.com/media/caa0a7_0fd5a0e07a8c49aaa05db9439f58e954~mv2.jpg/v1/fill/w_2039,h_1360,al_c,q_90,enc_auto/Social%20Media-34.jpg' alt='' />
+            <img src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt='' />
         </div>
         <Links />
     </div>

@@ -6,7 +6,7 @@ function Banner() {
     <div className='mt-[70px] '>
         <div className='-z-1  '>
         <img 
-         className='mx-auto' src='https://static.wixstatic.com/media/caa0a7_14a507a7f1834547ae246f99af776145~mv2.jpg/v1/crop/x_0,y_119,w_1067,h_930/fill/w_944,h_822,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/CMP_2754_websize.jpg' alt='' />
+         className='mx-auto' src='https://images.unsplash.com/photo-1687226013074-5d59ffeb2625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80' alt='' />
       </div>
       <div className='bg-white w-[90%] mx-auto -mt-[20px]  text-start md:bg-[#FAEEE7] '>
       <div className='z-10 relative -top-10 bg-white md:top-[-20rem] md:left-8 md:w-[450px] md:pb-3'>
@@ -34,7 +34,7 @@ Welcome to our site, We're so glad you are here!</h2>
         <div className='d-none md:block bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white'>
             <button>inQuire</button>
         </div>
-        <div className='logo d-none md:block flex justify-around'>
+        <div className='logo d-none md:flex justify-around'>
             <FacebookIcon />
             <InstagramIcon />
         </div>

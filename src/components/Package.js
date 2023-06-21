@@ -12,7 +12,7 @@ function Package() {
       </div>
       <div className='md:flex md-w-[70%] md:mx-auto'>
       <div>
-        <img className='w-[97%] mx-auto ' src='https://static.wixstatic.com/media/caa0a7_c9b4094045aa4b05b6d9bc97a415fda6~mv2.jpg/v1/crop/x_204,y_0,w_1640,h_1365/fill/w_836,h_696,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_DSC3825-Edit.jpg' alt='' />
+        <img className='w-[97%] mx-auto ' src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt='' />
       </div>
       <div className='md:bg-[#F8F4F1] md:h-[70%] md:relative md:right-[100px] md:top-5'>
         <div className='text-center'>
