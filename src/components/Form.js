@@ -1,5 +1,6 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import Testmon from './testmon'
 
 function Form({aman}) {
   const [firstName,setFirstName] = useState('')
@@ -7,6 +8,7 @@ function Form({aman}) {
   const [phone,setPhone] = useState('')
   const [lastName,setLastName] = useState('')
   const [text,setText] = useState('')
+  const [api,setApi] = useState([])
 
     const handleSumbit = async(e) =>{
         e.preventDefault()
@@ -27,14 +29,26 @@ function Form({aman}) {
     }
     const sumbit = (e) => {
       e.preventDefault()
-      // axios.post('',{
-      //   firstName:firstName,
-      //   email:email,
-      //   phone:phone,
-      //   lastName:lastName,
-      //   text:text
-      // }) 
+      axios.post('http://localhost:3001/data',{
+        firstName:firstName,
+        email:email,
+        phone:phone,
+        lastName:lastName,
+        text:text
+      }).then((res)=>{
+        alert(res.data)
+      })
+      setEmail('')
+      setFirstName('')
+      setLastName('')
+      setPhone('')
+      setText('')
     }
+    useEffect(()=>{
+      axios.get('http://localhost:3001/data').then((res)=>{
+        setApi(res.data)
+      })
+    },[])
   return (
     <div className='flex-col justify-center mt-[70px]'>
       {
@@ -42,7 +56,7 @@ function Form({aman}) {
           <h1 className='text-[30px] text-pink-500'>Let's get in touch!</h1>
         </div>
       }
-      <form className='flex flex-col ml-5' onSubmit={handleSumbit}>
+      <form className='flex flex-col ml-5' >
         <div className='flex flex-col md:flex-row md:mx-auto '>
             <div className='my-5 w-[90vw] md:w-[400px]  md:mx-5'>
               <label>First Name</label>
@@ -73,11 +87,19 @@ function Form({aman}) {
             aman && <p className='font-light text-[18px]'>If you don't recieve an email from me in 12 hours after sumbitting please check your junk/spam.</p>
           }
           {
-            aman ? <button onClick={handleSumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Sumbit </button>: <button onSubmit={sumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Add Testemonial</button>
+            aman && <button onClick={handleSumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Sumbit </button>
+          }
+          {
+            !aman &&  <button onClick={sumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Add Testemonial</button>
           }
         </div>
         
       </form>
+      {
+        !aman && api?.map((item)=>{
+            return <Testmon firstName={item.firstName} lastName={item.lastName} text={item.text}/>
+        })
+      }
     </div>
   )
 }

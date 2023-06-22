@@ -26,7 +26,7 @@ function Banner() {
                 </Link>
    </div>
             </div>
-            <div className="d-none  xl:block xl:border mt-[-15px] xl:pt-2  m-[10px]  bg-[#fff] xl:h-[200px] xl:w-[200px] xl:mr-[-10rem] xl:mt-[5rem] pb-[10px] xl:bg-[#F8F4F1] ">
+            <div className="xs:none d-none  xl:block xl:border mt-[-15px] xl:pt-2  m-[10px]  bg-[#fff] xl:h-[200px] xl:w-[200px] xl:mr-[-10rem] xl:mt-[5rem] pb-[10px] xl:bg-[#F8F4F1] ">
               <div className="flex flex-col ">
               <Link className="w-[150px] mx-auto" to='/contact'>
                 <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white' >MEET US</button>
