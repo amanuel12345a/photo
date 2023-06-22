@@ -2,7 +2,7 @@ import React from 'react'
 
 function Info() {
   return (
-    <div className='bg-white rounded-full py-10'>
+    <div className='bg-white py-10 w-[95%] mx-auto lg:w-[46%] rounded-lg'>
       <div>
         <h1 className='text-pink-400 text-[18px] font-semibold'>
         Let's have some fun!

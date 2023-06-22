@@ -33,6 +33,7 @@ function Nav() {
         ))
       }
     </ul>
+    <Link className='w-200px' to='/'>
     <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
     text-gray-800'>
       <span className='text-3xl  mr-1 '>
@@ -40,6 +41,7 @@ function Nav() {
       </span>
       amanuel
     </div>
+    </Link>
     </div>
   </div>
   )

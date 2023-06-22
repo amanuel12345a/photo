@@ -1,7 +1,8 @@
 import React from 'react'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-function Banner() {
+import { Link } from 'react-router-dom';
+function Bannerr() {
   return (
     <div className='mt-[70px] '>
         <div className='-z-1  '>
@@ -11,7 +12,7 @@ function Banner() {
       <div className='bg-white w-[90%] mx-auto -mt-[20px]  text-start md:bg-[#FAEEE7] '>
       <div className='z-10 relative -top-10 bg-white md:top-[-20rem] md:left-8 md:w-[450px] md:pb-3'>
    <div>
-    <h1 className='text-pink-500 font-extrabold text-[30px] pl-10'>hey friends,</h1>
+    <h1 className='text-pink-500 font-extrabold text-[25px] md:text-[25px] pl-10'>hey friends,</h1>
     <h2 className='text-[30px] font-bold pl-4'> I am alula</h2>
    <div className='font-semibold px-6 text-[18px]'>
     <h2 className='py-7' >
@@ -21,18 +22,28 @@ Welcome to our site, We're so glad you are here!</h2>
     </div>
    </div>
    <div className='flex justify-center'>
+    <Link to='/portfolio'>
     <button className='bg-green-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold'>LEARN MORE</button>
+    </Link>
+    
    </div>
       </div>
-      <div className='md:relative md:top-[-30rem] md:bg-white md:w-[250px] md:right-[-50rem] '>
+      <div className='md:relative md:top-[-50rem]  md:bg-white md:w-[250px] md:right-[-50rem] '>
         <div className='flex justify-center'>
-        <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white' > MEET US</button>
+          <Link to='/contact'>
+          <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white' > MEET US</button> 
+          </Link>
+        
         </div>
         <div className='d-none md:block bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold my-7 text-center hover:bg-white'>
+          <Link to='/package'>
             <button >packages</button>
+            </Link>
         </div>
         <div className='d-none md:block bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white'>
+        <Link to='/contact'>
             <button>inQuire</button>
+            </Link>
         </div>
         <div className='logo d-none md:flex justify-around'>
             <FacebookIcon />
@@ -57,8 +68,11 @@ We believe that every photoshoot is a unique experience, and we're all about bri
     So whether you're visiting our little slice of paradise or you call Aruba home, we'd be thrilled to capture your family or couple's special moments and create stunning memories that you'll cherish forever.
     </div>
     <div className='flex justify-center my-5'>
+      <Link to='/package'>
         <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold ' >PACKAGES</button>
+        </Link>
         </div>
+        
     <div>
         <h1 className='text-[25px] font-bold text-center'>FOR FAMILIES, COUPLES AND SINGLES
 WHO WANT TO HAVE FUN!</h1>
@@ -72,4 +86,4 @@ Leave the details to us!</p>
   )
 }
 
-export default Banner
+export default Bannerr

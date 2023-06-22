@@ -1,8 +1,39 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 
 function Form({aman}) {
-    const handleSumbit = (e) =>{
+  const [firstName,setFirstName] = useState('')
+  const [email,setEmail] = useState('')
+  const [phone,setPhone] = useState('')
+  const [lastName,setLastName] = useState('')
+  const [text,setText] = useState('')
+
+    const handleSumbit = async(e) =>{
         e.preventDefault()
+        const data = await axios.post('http://localhost:3001/email',{
+          firstName:firstName,
+          email:email,
+          phone:phone,
+          lastName:lastName,
+          text:text
+        }) 
+        alert(data.data)
+        setEmail('')
+        setFirstName('')
+        setLastName('')
+        setPhone('')
+        setText('')
+
+    }
+    const sumbit = (e) => {
+      e.preventDefault()
+      // axios.post('',{
+      //   firstName:firstName,
+      //   email:email,
+      //   phone:phone,
+      //   lastName:lastName,
+      //   text:text
+      // }) 
     }
   return (
     <div className='flex-col justify-center mt-[70px]'>
@@ -15,31 +46,35 @@ function Form({aman}) {
         <div className='flex flex-col md:flex-row md:mx-auto '>
             <div className='my-5 w-[90vw] md:w-[400px]  md:mx-5'>
               <label>First Name</label>
-            <input className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='First Name'/>
+            <input onChange={(e)=>setFirstName(e.target.value)} value={firstName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='First Name'/>
             </div>
         <div className='my-5 w-[90vw] md:w-[400px] md:mx-5'>
         <label>Email</label>
-        <input className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'  type='text' placeholder='email' required/>
+        <input onChange={(e)=>setEmail(e.target.value)} value={email} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'  type='text' placeholder='email' required/>
         </div>
         
         </div>
         <div className='flex flex-col md:flex-row md:mx-auto'>
             <div className='my-5 sm:w-[90vw] md:w-[400px] md:mx-5'>
             <label>Last Name</label>
-            <input className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='Last Name'/>
+            <input onChange={(e)=>setLastName(e.target.value)} value={lastName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='Last Name'/>
             </div>
         <div className='my-5 sm:w-[90vw] md:w-[400px]  md:mx-5'>
-        <label>Email</label>
-        <input className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'  type='text' placeholder='Phone'/>
+        <label>Phone</label>
+        <input onChange={(e)=>setPhone(e.target.value)} value={phone} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'  type='text' placeholder='Phone'/>
         </div>
         
         </div>
         <div className='mx-auto'>
-        <textarea className='my-2 w-[300px] md:w-[500px] h-[100px] mx-auto border-2 border-black pl-5 text-[18px] resize-none' placeholder='write your testimonial here.... '  required/>
+        <textarea onChange={(e)=>setText(e.target.value)} value={text} className='my-2 w-[300px] md:w-[500px] h-[100px] mx-auto border-2 border-black pl-5 text-[18px] resize-none' placeholder={aman ? 'your package' : 'write your testimonial here.... '}  required/>
         </div>
         <div className='mx-auto text-center'>
-          <p className='font-light text-[18px]'>If you don't recieve an email from me in 12 hours after sumbitting please check your junk/spam.</p>
-        <button className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit">{aman ? 'Sumbit': 'Add Testemonial'} </button>
+          {
+            aman && <p className='font-light text-[18px]'>If you don't recieve an email from me in 12 hours after sumbitting please check your junk/spam.</p>
+          }
+          {
+            aman ? <button onClick={handleSumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Sumbit </button>: <button onSubmit={sumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Add Testemonial</button>
+          }
         </div>
         
       </form>
