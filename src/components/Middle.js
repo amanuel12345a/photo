@@ -22,7 +22,7 @@ We believe that every photoshoot is a unique experience, and we're all about bri
     </div>
     <div className='flex justify-center my-5'>
          <Link className="w-[150px]" to='/package'>
-        <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold ' >PACKAGES</button>
+        <button className='bg-red-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold hover:bg-white ' >PACKAGES</button>
         </Link>
         </div>
     <div>

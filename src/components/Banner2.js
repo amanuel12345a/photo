@@ -20,7 +20,7 @@ function Banner() {
               </p>
               <div className='flex flex-col text-center xl:pt-5'>
               <Link className="w-[150px] m-auto" to='/portfolio'>
-    <button className='text-center bg-green-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold '>LEARN MORE</button>
+    <button className='text-center bg-green-300 mx-auto w-[150px] h-[30px] text-[18px] font-semibold hover:bg-white hover:text-black '>LEARN MORE</button>
     </Link>
     <Link className="w-[150px]  m-auto" to='/contact'>
                 <button className=' bg-red-300 my-3 lg:none mx-auto w-[150px] h-[30px] text-[18px] font-semibold text-center hover:bg-white' >MEET US</button>

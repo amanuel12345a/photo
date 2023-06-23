@@ -15,7 +15,7 @@ function Info() {
         <p className='font-semibold'>All you have to do is enjoy moments and let us do the rest!﻿</p>
         </div>
         <div>
-            <button className='text-red-600 font-semibold bg-green-400 mt-3 w-[120px] ' >Learn more</button>
+            <button className='text-red-600 font-semibold bg-green-400 mt-3 w-[120px] hover:bg-white ' >Learn more</button>
         </div>
     </div>
   )

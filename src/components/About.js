@@ -21,7 +21,7 @@ function About() {
         <div className='text-center'>
             <p className='my-5 font-semibold text-[20px]'>Let's go on an adventure together! </p>
             <Link className="w-[150px]" to='/package'>
-            <button className='bg-pink-500 text-center w-[250px] h-[40px] font-semibold'>CHECK OUT OUR PACKAGES</button>
+            <button className='bg-pink-500 text-center w-[250px] h-[40px] font-semibold hover:bg-white'>CHECK OUT OUR PACKAGES</button>
             </Link>
         </div>
         <div className='testemoni'> 
@@ -32,7 +32,7 @@ function About() {
             </div>
             <div className='mb-5 text-center'>
                 <Link className="w-[150px]" to='/testomonial'>
-                <button className='bg-pink-500 text-white w-[250px] h-[35px]' >THE REVIEWS</button>
+                <button className='bg-pink-500 text-white w-[250px] h-[35px] hover:bg-white hover:text-black' >THE REVIEWS</button>
                 </Link>
             </div>
         </div>

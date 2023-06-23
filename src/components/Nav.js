@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 function Nav() {
     let Links =[
         {name:"HOME",link:"/"},
-        {name:"portfolio",link:"/portfolio"},
-        {name:"testmonial",link:"/testmonial"},
-        {name:"package",link:"/package"},
-        {name:"contact",link:"/contact"},
+        {name:"Portfolio",link:"/portfolio"},
+        {name:"Testmonial",link:"/testmonial"},
+        {name:"Package",link:"/package"},
+        {name:"Contact",link:"/contact"},
       ];
       let [open,setOpen]=useState(false);
   return (

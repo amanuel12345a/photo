@@ -25,10 +25,10 @@ function Portfolio() {
   return (
     <div>
       <Nav />
-      <Images title="wedding" a={img1} b={img2} c={img3} d={img12} e={img10} />
-      <Images title="model" a={img6} b={img7} c={img8} d={img9} e={img5} />
+      <Images title="WEDDING" a={img1} b={img2} c={img3} d={img12} e={img10} />
+      <Images title="MODEL" a={img6} b={img7} c={img8} d={img9} e={img5} />
       <Images
-        title="single"
+        title="SINGLE"
         a={img16}
         b={img4}
         c={img13}

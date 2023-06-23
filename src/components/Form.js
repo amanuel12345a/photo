@@ -9,9 +9,26 @@ function Form({aman}) {
   const [lastName,setLastName] = useState('')
   const [text,setText] = useState('')
   const [api,setApi] = useState([])
+  const [error,setError] = useState('')
 
     const handleSumbit = async(e) =>{
         e.preventDefault()
+        if(!firstName){
+          setError("You need to fill your name before you sumbit.")
+          return 
+        }
+        if(!email){
+          setError("You need to fill your email before you sumbit.")
+          return 
+        }
+        if(!text){
+          setError('You need to fill the package before you sumbit.')
+          return 
+        }
+        if(!lastName){
+          setError("You need to fill your last name before you sumbit.")
+          return 
+        }
         const data = await axios.post('http://localhost:3001/email',{
           firstName:firstName,
           email:email,
@@ -29,6 +46,23 @@ function Form({aman}) {
     }
     const sumbit = (e) => {
       e.preventDefault()
+      if(!firstName){
+        setError("You need to fill your name before you sumbit.")
+        return 
+      }
+      if(!email){
+        setError("You need to fill your email before you sumbit.")
+        return 
+      }
+      if(!text){
+        setError("You need to fill your testmonial before you sumbit.")
+       
+        return 
+      }
+      if(!lastName){
+        setError("You need to fill your last name before you sumbit.")
+        return 
+      }
       axios.post('http://localhost:3001/data',{
         firstName:firstName,
         email:email,
@@ -60,7 +94,7 @@ function Form({aman}) {
         <div className='flex flex-col md:flex-row md:mx-auto '>
             <div className='my-5 w-[90vw] md:w-[400px]  md:mx-5'>
               <label>First Name</label>
-            <input onChange={(e)=>setFirstName(e.target.value)} value={firstName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='First Name'/>
+            <input onChange={(e)=>setFirstName(e.target.value)} value={firstName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' required  type='text' placeholder='First Name'/>
             </div>
         <div className='my-5 w-[90vw] md:w-[400px] md:mx-5'>
         <label>Email</label>
@@ -71,11 +105,11 @@ function Form({aman}) {
         <div className='flex flex-col md:flex-row md:mx-auto'>
             <div className='my-5 sm:w-[90vw] md:w-[400px] md:mx-5'>
             <label>Last Name</label>
-            <input onChange={(e)=>setLastName(e.target.value)} value={lastName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type='text' placeholder='Last Name'/>
+            <input onChange={(e)=>setLastName(e.target.value)} value={lastName} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' required  type='text' placeholder='Last Name'/>
             </div>
         <div className='my-5 sm:w-[90vw] md:w-[400px]  md:mx-5'>
         <label>Phone</label>
-        <input onChange={(e)=>setPhone(e.target.value)} value={phone} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'  type='text' placeholder='Phone'/>
+        <input onChange={(e)=>setPhone(e.target.value)} value={phone} className='shadow appearance-none border-2 border-black rounded w-full py-2 px-3 md:py-4 md:px-7 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' required   type='text' placeholder='Phone'/>
         </div>
         
         </div>
@@ -85,6 +119,9 @@ function Form({aman}) {
         <div className='mx-auto text-center'>
           {
             aman && <p className='font-light text-[18px]'>If you don't recieve an email from me in 12 hours after sumbitting please check your junk/spam.</p>
+          }
+          {
+            error && <p className='text-red-700 text-[20px] font-bold'>{error}</p>
           }
           {
             aman && <button onClick={handleSumbit} className='bg-green-300 h-[40px] mt-2 w-[250px]' type="submit"> Sumbit </button>

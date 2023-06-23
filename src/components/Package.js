@@ -28,7 +28,7 @@ function Package() {
         </div>
         <div className=' w-[150px] mx-auto  font-semibold'>
           <Link className="w-[150px]" to='/contact'>
-            <button className='text-white bg-pink-400 w-[150px] text-[20px] my-3 '>BOOK NOW</button>
+            <button className='text-white hover:text-black hover:bg-white bg-pink-400 w-[150px] text-[20px] my-3 '>BOOK NOW</button>
             </Link>
         </div>
         <div className='border-b-[1px] border-black w-[90%] mx-auto'>
