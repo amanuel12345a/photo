@@ -1,12 +1,31 @@
-import React from 'react'
+import React from "react";
 
-function Images() {
+function Images({ a, b, c, d, e, title }) {
   return (
-    <div className='mt-[80px]'>
-      <h1 className='text-[30px] text-center text-pink-400 font-extrabold'>COUPLES</h1>
-      <img src='https://images.unsplash.com/photo-1687156025945-c1008a847e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80' alt='' />
+    <div className="mt-[80px] mb-[-80px]">
+      <h1 className="text-[30px] text-center text-pink-400 font-extrabold">
+        {title}
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div>
+        <img  className="object-cover h-[100%]" src={a} alt="" />
+        </div>
+        <div>
+        <img className="object-cover h-[100%]" src={b} alt="" />
+        </div>
+        <div>
+        <img className="object-cover h-[100%]" src={c} alt="" />
+        </div>
+        <div>
+        <img className="object-cover h-[100%]" src={d} alt="" />
+        </div>
+        <div>
+        <img className="h-[100%]" src={e} alt="" />
+        </div>
+        
+      </div>
     </div>
-  )
+  );
 }
 
-export default Images
+export default Images;
