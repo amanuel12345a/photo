@@ -9,7 +9,7 @@ function Banner() {
       <div className="flex justify-center">
         <div class=" bg-[url(https://placekitten.com/600)] h-[600px] w-[800px] lg:relative bg-no-repeat bg-cover">
           <div class="xl:flex xl:justify-around ">
-            <div className="mt-[20rem] m-[10px] rounded-md xs:h-[450px] sm:h-[500px] lsm:h-[400px] md:h-[270px] xl:border bg-white xl:bg-[#F8F4F1] xl:h-[400px] xl:w-[400px] xl:ml-[-10rem] xl:mt-[15rem] xl:pb-3">
+            <div className="mt-[20rem] m-[10px] rounded-md xs:h-[450px] sm:h-[500px] lsm:h-[400px] md:h-[270px] xl:border bg-white xl:bg-[#F8F4F1] xl:h-[400px] xl:w-[400px] xl:ml-[-10rem] xl:mt-[12rem] xl:pb-3">
               <h1 className="text-pink-500 font-extrabold text-[30px] pl-10">Hey friend,</h1>
               <h2 className='text-[30px] font-bold pl-4'>We are Eyla & Jonnathan!</h2>
               <p className="font-semibold px-6 text-[18px]">
