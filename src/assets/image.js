@@ -9,7 +9,7 @@ import img8 from "./blue kaba -1 copy.jpg";
 import img9 from "./blue kaba -5 copy.jpg";
 import img10 from "./cheers copy.jpg";
 import img11 from "./fifi weeding ig post copy.jpg";
-import img12 from "./fifi weeding ig post-1 copy.jpg";
+import img12 from "./fifi weeding ig post-1.jpg";
 import img13 from "./jewlery edited-1.jpg";
 import img14 from "./jewlery edited-2.jpg";
 import img15 from "./jewlery edited-3.jpg";
