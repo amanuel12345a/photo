@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Middle() {
   return (
-      <div className='mt-[150px] xs:mt-[150px] sm:mt-[100px] lsm:mt-[0px] text-[20px]  pl-4 bg-white md:bg-[#FAEEE7] md:w-[90%] pt-4 mx-[10px] lg:mt-[-30px] lg:w-[60%] lg:mx-auto xl:w-[50%] '>
+      <div className='mt-[150px] xs:mt-[150px] sm:mt-[100px] lsm:mt-[0px] text-[20px]  pl-4 bg-white md:bg-[#FAEEE7] md:w-[90%] pt-4 mx-[10px] lg:mt-[-30px] xl:mt-[-20px] lg:w-[60%] lg:mx-auto xl:w-[50%] '>
         <div className='md:text-center'>
         <h1 className='text-[30px] font-semibold md:inline-block pr-5'>
 Aruba Family </h1>
